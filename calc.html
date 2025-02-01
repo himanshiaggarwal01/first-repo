@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+.box{
+	border-radius:8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding:30px 0 30px 50px ; 
+	margin:auto;}
+*{
+	padding}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function sum()
+{
+	let a,b,c;
+	a=parseFloat(document.form.Number1.value);
+	b=parseFloat(document.form.Number2.value);
+	c=a+b;
+	document.form.result.value=c;
+}		
+function diff()
+{
+	let a,b,c;
+	a=parseFloat(document.form.Number1.value);
+	b=parseFloat(document.form.Number2.value);
+	c=a-b;
+	document.form.result.value=c;
+}		
+function mul()
+{
+	let a,b,c;
+	a=parseFloat(document.form.Number1.value);
+	b=parseFloat(document.form.Number2.value);
+	c=a*b;
+	document.form.result.value=c;
+}		
+function div()
+{
+	let a,b,c;
+	a=parseFloat(document.form.Number1.value);
+	b=parseFloat(document.form.Number2.value);
+	if(b!==0){
+		c=a/b;
+	document.form.result.value=c;}
+	else{
+	alert("Cannot divide by 0");}
+	
+}
+function blank()
+{
+	let a,b,c
+	document.form.Number1.value=" ";
+	document.form.Number2.value=" ";
+	document.form.result.value=" ";
+	}	
+var name;	
+name=window.prompt("Enter Your Name");
+document.writeln("<h1 align=center>Hello "+name+"!!!</h1>");
+document.writeln("<h3>Mini Calculator</h3>");
+</script>
+<form name="form" class=box>
+Number 1
+<input type=number name="Number1">
+<br><br>
+Number 2
+<input type=number name="Number2"><br><br>
+<input type=button value=+ onClick="sum()">
+<input type=button value=- onClick="diff()">
+<input type=button value=* onClick="mul()">
+<input type=button value=/ onClick="div()">
+<br><br>
+Result
+<input type=number name="result"><br><br>
+<input type=button value="Clear" onClick="blank()">
+ 
+</form>
+</body>
+</html>
